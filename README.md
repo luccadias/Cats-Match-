@@ -2,10 +2,12 @@
 
 ## Turma 05K
 
-## Integrantes do grupo:
+## Tinder pra cachorros :dog:
 
-* Aluno 1
-* Aluno 2
-* Aluno 3
-* Aluno 4
-* Aluno 5
+| Nome  | TIA |
+| ------------- | ------------- |
+| Lucca Arie Dias | 31653375  |
+| Fernando Sacchetto  | 31631290  |
+| Ronifer Silva  | 31685102  |
+| Henrique Conrado  | 31600603  |
+| Flavio Costa  | 31534112  |
