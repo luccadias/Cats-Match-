@@ -58,8 +58,6 @@ esperadas do sistema.
 
 ![](pessoa.png)
 
-Fonte: Exemplos gerados pelo assistente do **Enterprise Architect**.
-
 ### Protótipos para funcionalidade 2
 - Nome do animal
 - Raça
@@ -68,8 +66,6 @@ Fonte: Exemplos gerados pelo assistente do **Enterprise Architect**.
 - Upload foto
 
 ![](dog.png)
-
-Fonte: Exemplos gerados pelo assistente do **Enterprise Architect**.
 
 ### Protótipos para funcionalidade 3
 - Foto do animal, Like or Dislike
