@@ -55,7 +55,7 @@ esperadas do sistema.
 - Idade
 - Descricão
 - Upload Foto
-![](cadastro pessoa.png)
+![](pessoa.png)
 
 Fonte: Exemplos gerados pelo assistente do **Enterprise Architect**.
 
@@ -66,7 +66,7 @@ Fonte: Exemplos gerados pelo assistente do **Enterprise Architect**.
 - Descrição
 - Upload foto
 
-![](cadastro dog.png)
+![](dog.png)
 
 Fonte: Exemplos gerados pelo assistente do **Enterprise Architect**.
 
