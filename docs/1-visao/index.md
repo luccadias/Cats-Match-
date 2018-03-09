@@ -6,71 +6,72 @@ esperadas do sistema.
 
 ## Objetivos
 
-* Objetivo 1
-* Objetivo 2
-* Objetivo 3
-* etc.
+* Encontrar um par para seu cachorro.
+* Encontrar um para o dono.
+* Fazer amizades.
 
 ## Problema
 
-* Descrição do problema: ___
-* Quem é afetado pelo problema: ____
-* Impacto no negócio: ___
-* Benefícios de uma boa solução: ___
+* Descrição do problema: Muitos donos de cães e gatos tem dificuldades de encontrarem um par compativel com o seu cachorro.
+* Quem é afetado pelo problema: Donos dos animais e os animais.
+* Impacto no negócio: Dificuldade de encontrar um par perfeito.
+* Benefícios de uma boa solução: Trazer a felicidade para ambas as partes.
 
 ## Definições, abreviações e outros termos do domínio do problema
 
-* Definição 1
-* Definição 2
-* Definição 3
-* etc.
+* Relacionamento/Entreterimento 
 
 ## Integração com outros sistemas
 
-* Sistema externo 1
-* Sistema externo 2
-* Sistema externo 3
-* etc.
+* Login por facebook
+* Geolocalização nativo
  
 ## Interessados
 
-* Tipo de interessado 1
-* Tipo de interessado 2
-* Tipo de interessado 3
-* etc.
+* Pessoas que tem cães e gatos.
+* Pessoas que querem relacionamento.
 
 ## Usuários
 
-* Tipo de usuário 1
-* Tipo de usuário 2
-* Tipo de usuário 3
-* etc.
+* Pessoas que tem cães e gatos.
+* Pessoas que querem relacionamento.
+* Alunos do Mackenzie.
 
 ## Funcionalidades do produto
 
-* Funcionalidade 1
-* Funcionalidade 2
-* etc.
+* Cadastro da pessoa.
+* Cadastro do animal.
+* Pagina de match`s.
 
 ## Restrições do projeto
 
-* Restrição 1
-* Restrição 2
-* Restrição 3
-* etc.
+* Somente que possui animal de estimação pode cadastrar.
+* Nescessario conexão com internet.
 
 ## Protótipos de tela
 
 ### Protótipos para funcionalidade 1
-
-![](proto1.png)
+- Nome (get Facebook)
+- Idade
+- Descricão
+- Upload Foto
+![](cadastro pessoa.png)
 
 Fonte: Exemplos gerados pelo assistente do **Enterprise Architect**.
 
 ### Protótipos para funcionalidade 2
+- Nome do animal
+- Raça
+- Idade
+- Descrição
+- Upload foto
 
-![](proto2.png)
+![](cadastro dog.png)
 
 Fonte: Exemplos gerados pelo assistente do **Enterprise Architect**.
 
-### Protótipos para funcionalidade N
+### Protótipos para funcionalidade 3
+- Foto do animal, Like or Dislike
+- Botão voltar
+
+![](match.png)
