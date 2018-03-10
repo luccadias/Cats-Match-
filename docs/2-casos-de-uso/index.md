@@ -8,8 +8,6 @@
 
 ## 2. Especificação dos casos de uso
 
-**Instruções do professor**: Para cada caso de uso, criar as tabelas com a especificação do caso de uso. Siga o exemplo dado abaixo:
-
 ### 2.1. Caso de uso **MANTER INFORMAÇÕES CADASTRAIS**
 
 | Campo          | Informação        |
@@ -34,6 +32,43 @@
 | 3) O sistema registra o cadastro do usuário. |
 | 4) Volta ao passo (1) do fluxo principal |
 
-**Instruções do professor**: As tabelas acima mostram um exemplo de especificação de **um único caso de uso**. Lembre-se de especificar cada um dos casos de uso.
+### 2.2. Caso de uso **BUSCAR PESSOAS E ANIMAIS**
 
+| Campo          | Informação        |
+|---|---|
+| Identificador: | UC02              |
+| Nome:          | Buscar pessoas e animais |
+| Atores:        | Usuário cadastrado |
+| Sumário:       | Buscar outros usuários |
+
+| Fluxo Principal |
+|---|
+| 1) O sistema exibe os usuários de acordo com a análise do usuário logado no sistema. |
+| 2) O usuário escolhe a opção"Gostei".                   |
+| 3) O sistema exibe o próximo usuário. |
+
+| Fluxo Alternativo (2a): O usuário não escolhe a opção de gostar. |
+|---|
+| 1) O sistema exibe os usuários de acordo com a análise do usuário logado no sistema. |
+| 2) O usuário escolhe a opção "Não Gostei". |
+| 4) Volta ao passo (1) do fluxo original |
+
+### 2.3. Caso de uso **INTERAGIR COM PESSOAS E SEUS ANIMAIS**
+
+| Campo          | Informação        |
+|---|---|
+| Identificador: | UC03              |
+| Nome:          | Interagir com pessoas e seus animais |
+| Atores:        | Usuário cadastrado |
+| Sumário:       | Interagir com outros usuários |
+
+| Fluxo Principal |
+|---|
+| 1) O sistema verifica os usuários que o usuário logado no sistema gostou e se isso foi retribuido. |
+| 2) O sistema exibe um chat para conversar com o usuário que também "gostou" do usuário logado no sistema.                   |
+
+| Fluxo Alternativo (2a): Ninguem "gostou" do usuário logado no sistema. |
+|---|
+| 1) O sistema informa que nenhum usuário "gostou" do usuário logado no sistema. |
+| 2) O sistema volta ao passo (1) do fluxo original |
 
