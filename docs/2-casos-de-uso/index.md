@@ -51,7 +51,7 @@
 |---|
 | 1) O sistema exibe os usuários de acordo com a análise do usuário logado no sistema. |
 | 2) O usuário escolhe a opção "Não Gostei". |
-| 4) Volta ao passo (1) do fluxo original |
+| 3) Volta ao passo (1) do fluxo original |
 
 ### 2.3. Caso de uso **INTERAGIR COM PESSOAS E SEUS ANIMAIS**
 
