@@ -1,20 +1,20 @@
 # Documento de Visão do Projeto PETS MATCH :dog:
 
-Este documento apresenta uma solução de software para o projeto *Pets Match*, solicitado pelo cliente *X*, 
+Este documento apresenta uma solução de software para o projeto *Cats Match*, solicitado pelo cliente *X*, 
 apresentando os problemas a serem solucionados, as necessidades dos principais envolvidos, o alcance do projeto e as funcionalidades 
 esperadas do sistema.
 
 ## Objetivos
 
-* Encontrar um par para seu cachorro.
-* Encontrar um para o dono.
-* Fazer amizades.
+* Encontrar um dono para seu gato.
+* Amenizar o numero de gatos abandonados.
+* Ajudar as pessoas encontrarem um gato.
 
 ## Problema
 
-* Descrição do problema: Muitos donos de cães e gatos tem dificuldades de encontrarem um par compativel com o seu cachorro.
-* Quem é afetado pelo problema: Donos dos animais e os animais.
-* Impacto no negócio: Dificuldade de encontrar um par perfeito.
+* Descrição do problema: Exitem muitos gatos que precisam de um lar, pois a maioria acabam abandonados ou mortos.
+* Quem é afetado pelo problema: Os gatos e alguns donos que precisam de alguém para adota porque não tem dinheiro para manter outro.
+* Impacto no negócio: Dificuldade de encontrar um dono.
 * Benefícios de uma boa solução: Trazer a felicidade para ambas as partes.
 
 ## Definições, abreviações e outros termos do domínio do problema
@@ -24,24 +24,22 @@ esperadas do sistema.
 ## Integração com outros sistemas
 
 * Login por facebook
-* Geolocalização nativo
  
 ## Interessados
 
-* Pessoas que tem cães e gatos.
-* Pessoas que querem relacionamento.
+* Pessoas que tem gatos.
+* Pessoas que querem adotar um gato.
 
 ## Usuários
 
-* Pessoas que tem cães e gatos.
-* Pessoas que querem relacionamento.
-* Alunos do Mackenzie.
+* Pessoas que tem gatos.
+* Pessoas que querem adotar gatos.
 
 ## Funcionalidades do produto
 
-* Cadastro da pessoa.
-* Cadastro do animal.
-* Pagina de match`s.
+* Cadastro de gatos.
+* Cadastro de pessoas.
+* Pagina de match`s para adoção.
 
 ## Restrições do projeto
 
