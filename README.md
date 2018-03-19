@@ -2,7 +2,7 @@
 
 ## Turma 05K
 
-## Tinder pra cachorros :dog:
+## Tinder pra gatos :cat:
 
 | Nome  | TIA |
 | ------------- | ------------- |
