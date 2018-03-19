@@ -19,7 +19,7 @@ esperadas do sistema.
 
 ## Definições, abreviações e outros termos do domínio do problema
 
-* Relacionamento/Entreterimento 
+* Facilitar a adoção dos gatos. 
 
 ## Integração com outros sistemas
 
@@ -43,7 +43,7 @@ esperadas do sistema.
 
 ## Restrições do projeto
 
-* Somente que possui animal de estimação pode cadastrar.
+* Somente que possui animal de estimação pode cadastrar um animal.
 * Nescessario conexão com internet.
 
 ## Protótipos de tela
