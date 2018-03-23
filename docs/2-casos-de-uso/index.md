@@ -2,7 +2,7 @@
 
 ## 1. Diagrama de casos de uso
 
-![](caso_de_uso.png)
+![](diagrama.png)
 
 ## 2. Especificação dos casos de uso
 
