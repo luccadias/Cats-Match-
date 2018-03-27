@@ -1,0 +1,28 @@
+{
+  "name": "dogmatch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "\t",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "",
+    "cfenv": "",
+    "dotenv": "^4.0.0",
+    "ejs": "",
+    "express": "",
+    "mongodb": "^3.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luccadias/appRunner.git"
+  },
+  "author": "Lucca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luccadias/appRunner/issues"
+  },
+  "homepage": "https://github.com/luccadias/appRunner#readme"
+}
