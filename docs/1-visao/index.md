@@ -49,12 +49,12 @@ esperadas do sistema.
 ## Protótipos de tela
 
 ### Protótipos para funcionalidade 1
-- Nome (get Facebook)
-- Idade
-- Descricão
+- Nome 
+- Email
+- Password
 - Upload Foto
 
-![](pessoa.png)
+![](homePage.png)
 
 ### Protótipos para funcionalidade 2
 - Nome do animal
@@ -63,10 +63,10 @@ esperadas do sistema.
 - Descrição
 - Upload foto
 
-![](dog.png)
+![](registerPage.png)
 
-### Protótipos para funcionalidade 3
+<!-- ### Protótipos para funcionalidade 3
 - Foto do animal, Like or Dislike
 - Botão voltar
 
-![](match.png)
+![](match.png) -->
