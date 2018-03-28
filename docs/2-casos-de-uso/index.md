@@ -2,71 +2,93 @@
 
 ## 1. Diagrama de casos de uso
 
-![](diagrama.png)
+
+![Dagrama dos casos de uso](caso_de_uso.png)
 
 ## 2. Especificação dos casos de uso
 
-### 2.1. Caso de uso **MANTER INFORMAÇÕES CADASTRAIS**
+### 2.1. Caso de uso **REGISTRAR CHAMADO**
 
 | Campo          | Informação        |
 |---|---|
 | Identificador: | UC01              |
-| Nome:          | Manter informações cadastrais |
-| Atores:        | Usuário cadastrado |
-| Sumário:       | Atualizar informações cadastrais |
+| Nome:          | Manter Cadastro |
+| Atores:        | Usuário |
+| Sumário:       | Incluir, alterar e excluir cadastro |
 
 | Fluxo Principal |
 |---|
-| 1) O usuário seleciona a opção de Alterar perfil. |
-| 2) O sistema recupera as informações do usuário.                   |
-| 3) O sistema apresenta as informações pessoais e fotos cadastradas em um formulário. |
-| 4) O usuário realiza as alterações necessárias. |
-| 5) O sistema salva as alterações. |
+| 1) O usuario seleciona seleciona a opção **Alterar cadastro**. |
+| 2) O sistema redireciona para pagina de alteração do perfil.                   |
+| 3) O Cliente realiza altereção desejada em seu cadastro. |
+| 4) O sistema registra que a operação foi bem-sucedida. |
 
-| Fluxo Alternativo (2a): O sistema não encontra as informações do usuário cadastrado. |
-|---|
-| 1) O sistema informa que não conseguiu recuperar as informações do perfil e exibe a tela para cadastro. |
-| 2) O usuário realiza o cadastro. |
-| 3) O sistema registra o cadastro do usuário. |
-| 4) Volta ao passo (1) do fluxo principal |
+| Fluxo Alternativo (2a): O sistema não encontra as informações do usuário. |
+|---| 
+| 1) O sistema informa que não conseguiu recuperar as informações do usuário e apresenta a opção de cadastrar o usuário. |
+| 2) O Usuario preenche o formulário de cadastro ou entra pelo facebook. |
+| 3) O sistema registra os dados do usuário. |
+| 4) Volta ao passo (3) do fluxo principal. |
 
-### 2.2. Caso de uso **BUSCAR PESSOAS E ANIMAIS**
+
+### 2.2. Cadastrar animal de estimação **
 
 | Campo          | Informação        |
 |---|---|
 | Identificador: | UC02              |
-| Nome:          | Buscar pessoas e animais |
-| Atores:        | Usuário cadastrado |
-| Sumário:       | Buscar outros usuários |
+| Nome:          | Cadastrar animal de estimação |
+| Atores:        | Usuário |
+| Sumário:       | O Usuário realiza o cadastro do seu animal de estimação |
 
 | Fluxo Principal |
 |---|
-| 1) O sistema exibe os usuários de acordo com a análise do usuário logado no sistema. |
-| 2) O usuário escolhe a opção"Gostei".                   |
-| 3) O sistema exibe o próximo usuário. |
+| 1) O usuario seleciona seleciona a opção **Cadastrar animal de estimação**. |
+| 2) O sistema redireciona para pagina de cadastro de animal.                   |
+| 3) O Cliente preenche as informações sobre seu animal e cadastra uma foto. |
+| 4) O sistema registra que a operação foi bem-sucedida. |
 
-| Fluxo Alternativo (2a): O usuário não escolhe a opção de gostar. |
-|---|
-| 1) O sistema exibe os usuários de acordo com a análise do usuário logado no sistema. |
-| 2) O usuário escolhe a opção "Não Gostei". |
-| 3) Volta ao passo (1) do fluxo original |
+| Fluxo Alternativo (2a): O sistema informa que animal ja esta cadastrado. |
+|---| 
+| 1) O sistema informa que não conseguiu realizar o cadastro pois animal ja está cadastrado. |
+| 2) O Usuario clica para cadastrar um animal diferente. |
+| 3) O sistema processa opção. |
+| 4) Volta ao passo (3) do fluxo principal. |
 
-### 2.3. Caso de uso **INTERAGIR COM PESSOAS E SEUS ANIMAIS**
+### 2.3. Buscar animal para adoção **
 
 | Campo          | Informação        |
 |---|---|
-| Identificador: | UC03              |
-| Nome:          | Interagir com pessoas e seus animais |
-| Atores:        | Usuário cadastrado |
-| Sumário:       | Interagir com outros usuários |
+| Identificador: | UC02              |
+| Nome:          | Buscar animal para adoção |
+| Atores:        | Usuário |
+| Sumário:       | O Usuário realiza o busca de animal para adoção |
 
 | Fluxo Principal |
 |---|
-| 1) O sistema verifica os usuários que o usuário logado no sistema gostou e se isso foi retribuido. |
-| 2) O sistema exibe um chat para conversar com o usuário que também "gostou" do usuário logado no sistema.                   |
+| 1) O usuario seleciona seleciona a opção **Buscar animal para adoção**. |
+| 2) O sistema redireciona para pagina de adoção onde é exibida lista de animais.                   |
+| 3) O Cliente escolhe o animal que deseja e seleciona. |
+| 4) O sistema registra opção. |
 
-| Fluxo Alternativo (2a): Ninguem "gostou" do usuário logado no sistema. |
+| Fluxo Alternativo (2a): O sistema informa que não a animais disponiveis. |
+|---| 
+| 1) O sistema informa que não há animais para adoção. |
+
+### 2.4. Interagir com dono do animal **
+
+| Campo          | Informação        |
+|---|---|
+| Identificador: | UC04              |
+| Nome:          | Interagir com dono do animal |
+| Atores:        | Usuário |
+| Sumário:       | O Usuário realiza contato com o dono do animal qual deseja adotar |
+
+| Fluxo Principal |
 |---|
-| 1) O sistema informa que nenhum usuário "gostou" do usuário logado no sistema. |
-| 2) O sistema volta ao passo (1) do fluxo original |
+| 1) O usuario seleciona seleciona a opção **Interagir com dono do animal**. |
+| 2) O sistema redireciona para pagina de chat onde é exibida uma conversa com o dono.                   |
+| 3) Os dois clientes interagem. |
 
+| Fluxo Alternativo (2a): O sistema informa que não a animais disponiveis. |
+|---| 
+| 1) O sistema informa que não há chat disponivel. |
