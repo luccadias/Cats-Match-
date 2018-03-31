@@ -40,6 +40,7 @@ esperadas do sistema.
 * Cadastro de gatos.
 * Cadastro de pessoas.
 * Pagina de match`s para adoção.
+* Pagina de Chat.
 
 ## Restrições do projeto
 
