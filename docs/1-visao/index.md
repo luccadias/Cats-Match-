@@ -66,8 +66,7 @@ esperadas do sistema.
 
 ![](registerPage.png)
 
-<!-- ### Protótipos para funcionalidade 3
-- Foto do animal, Like or Dislike
-- Botão voltar
+### Protótipos para funcionalidade 3
+- Foto do animal, Like 
 
-![](match.png) -->
+![](pageadocao.png) 
