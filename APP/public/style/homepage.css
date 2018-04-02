@@ -1,0 +1,109 @@
+.menu-left{
+    width:20%;
+    height:100%;
+    background:#F4D9AB;
+    float:left;
+    position: fixed;
+    max-height: 100%;
+    display:block;
+}
+.logo{
+    margin: 1em 0 1em 0;
+    width:7em;
+}
+.imagePerfil{
+    margin:0 auto;
+    width:10em;
+    height:10em;
+    background:rgb(230, 230, 230);
+    border-radius: 100px;
+    border: #FF9041 1px solid;
+    background-image: url("http://178.62.201.127/sites/default/files/default_images/default-user.png");
+    background-size: 10em 10em;
+    background-repeat: no-repeat;
+}
+.textWelcome h1{
+    margin:0.6em 0 -0.3em 0;
+    color: rgba(255, 126, 21, 0.87);
+    font-size:0.9em;
+}
+.textWelcome p{
+    margin:0;
+    font-size:1.5em;
+    color: #FF7F15;
+}
+.menus{
+    margin:0 auto;
+    margin-top:1em;
+    width:90%;
+    background-color:#FF7F15;
+    color:rgba(255, 255, 255, 0.63)
+}
+.menus li{
+    padding:0.3em;
+}
+.menus li:hover{
+    background-color:rgb(168, 76, 0);
+    cursor: pointer;
+}
+#menuSand{
+    display: none;
+}
+.fa-times{
+    display:none;
+}
+@media only screen and (max-width: 600px) {
+    .fa-bars{
+        display:block;
+        margin:0.2em;
+        color:white;
+        background-color:#FF7F15;
+        padding:0.2em;
+        border-radius:5px;
+    }
+    #menuSand{
+        display:block;
+    }
+    .menu-left{
+        display:none;
+        width:80%;
+    }
+    .fa-times{
+        display:block;
+        margin:0.5em 1em 0 0;
+        position:absolute;
+        right:-0.3em;
+        color:#FF7F15
+    }
+}
+
+.slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes slideInLeft {
+    0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    }
+    @keyframes slideInLeft {
+    0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    } 
