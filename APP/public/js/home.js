@@ -2,6 +2,7 @@
 var auth = localStorage.getItem("catsmathObj")
 if (authLogin(auth)) {
     $(document).ready(function () {
+
         var objPessoa = (JSON.parse(auth))
         $(".username").text(objPessoa.username)
         $("#logout").click(function () {
@@ -19,6 +20,9 @@ if (authLogin(auth)) {
         // })
         
         $( "#closeMenu" ).click(function() {
+            // alert("dsa")
+            // $("#menuSand").css("display","block");
+            // $(".menu-left").css("display", "none");
             $( ".menu-left" ).animate({
               width: "toggle",
               height: "toggle"

@@ -6,6 +6,8 @@
     position: fixed;
     max-height: 100%;
     display:block;
+    text-align: center;
+    margin:0 auto;
 }
 .logo{
     margin: 1em 0 1em 0;
@@ -52,6 +54,7 @@
 .fa-times{
     display:none;
 }
+
 @media only screen and (max-width: 600px) {
     .fa-bars{
         display:block;
@@ -63,9 +66,10 @@
     }
     #menuSand{
         display:block;
+        float:left;
     }
     .menu-left{
-        display:none;
+        display:none ;
         width:80%;
     }
     .fa-times{
