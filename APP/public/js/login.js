@@ -26,7 +26,7 @@ if (authLogin(auth)) {
                 url: "/loginAuth",
                 data: obj,
                 success: function(data){
-                    if(data.status == 200){
+                    if(data._id){
                         localStorage.setItem('catsmathObj', JSON.stringify(data));
                         window.location.href = "/home";
                     } else {

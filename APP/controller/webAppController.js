@@ -19,7 +19,16 @@ function checkRegisterMember(userRegister){
     })
 }
 
+function checkImage(dataImage){
+    return new Promise((resolve, reject)=>{
+        dataBaseModel.updateImage(dataImage).then(response=>{
+            resolve(response)
+        })
+    })
+}
+
 module.exports = {
     checkLoginCredentials:checkLoginCredentials,
-    checkRegisterMember:checkRegisterMember
+    checkRegisterMember:checkRegisterMember,
+    checkImage:checkImage
 }

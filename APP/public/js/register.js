@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+    $("input, select, textarea").val('')
     $("#buttonConfirmar").click(function () {
         var userName = $("#usernameRegister").val()
         var email = $("#emailRegister").val()
@@ -8,7 +8,8 @@ $(document).ready(function () {
             var objUser = {
                 "username": userName.trim(),
                 "email": email,
-                "password": password.trim()
+                "password": password.trim(),
+                "image": null
             }
             $("#usernameRegister").val("");$("#emailRegister").val("");$("#passwordRegister").val("")
             registerUser(objUser)
