@@ -151,3 +151,7 @@
     .btn-floating{
         background-color:#FF7F15 !important
     }
+
+    a{
+        color:rgba(255, 255, 255, 0.63)
+    }
