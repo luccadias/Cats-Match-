@@ -17,6 +17,18 @@ function authenticate(username, password) {
         })
     })
 }
+function registerCats(credentialsPayload){
+    return new Promise((resolve,reject)=>{
+        MongoClient.connect(databaseServiceCredentials.mongodb,function(err,db){
+            if(err) reject(err)
+            const dbo = db.db(databaseServiceCredentials.dbName);
+            const collection = dbo.collection('dados_gato');
+            collection.insertMany([credentialsPayload],function(err,result){
+                resolve(result);
+            });
+        });
+    });
+};
 
 function registerMember(credentialsPayload) {
     return new Promise((resolve, reject) => {
@@ -60,5 +72,6 @@ function findUser(indicePessoa){
 module.exports = {
     authenticate: authenticate,
     registerMember: registerMember,
-    updateImage: updateImage
+    updateImage: updateImage,
+    registerCats:registerCats
 }

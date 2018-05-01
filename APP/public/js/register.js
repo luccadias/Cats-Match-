@@ -13,6 +13,7 @@ $(document).ready(function () {
             }
             $("#usernameRegister").val("");$("#emailRegister").val("");$("#passwordRegister").val("")
             registerUser(objUser)
+            console.log(userName.length)
         } else {
             toast("Preencha corretamente")
         }
@@ -24,7 +25,7 @@ $(document).ready(function () {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
-
+    
     function registerUser(objUser) {
         $.ajax({
             type: "POST",

@@ -10,6 +10,13 @@ function checkLoginCredentials(userCredentials){
         })
     })
 }
+function checkRegisterCat(registerCat){
+    return new Promise((resolve,reject)=>{
+        dataBaseModel.registerCat(registerCat).then(response=>{
+            resolve(response)
+        })
+    })
+}
 
 function checkRegisterMember(userRegister){
     return new Promise((resolve,reject)=> {
@@ -30,5 +37,6 @@ function checkImage(dataImage){
 module.exports = {
     checkLoginCredentials:checkLoginCredentials,
     checkRegisterMember:checkRegisterMember,
-    checkImage:checkImage
+    checkImage:checkImage,
+    checkRegisterCat:checkRegisterCat
 }
