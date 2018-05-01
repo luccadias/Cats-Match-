@@ -24,7 +24,10 @@ router.post('/registerMember', function (req, res) {
             res.status(200).send("AN INTERNAL SERVER ERROR OCURRED")
         });
 });
+
+
 router.post('/updateImage', function (req, res) {
+    console.log(req.files.sampleData.data)
     var base64 = Buffer.from(req.files.sampleData.data).toString('base64')
     var objData = {
         "image": base64,

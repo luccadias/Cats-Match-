@@ -5,15 +5,19 @@ function authenticate(username, password) {
     return new Promise((resolve, reject) => {
         MongoClient.connect(databaseServiceCredentials.mongodb, function (err, db) {
             if (err) reject(err)
+            if (db) {
             const dbo = db.db(databaseServiceCredentials.dbName);
             const collection = dbo.collection('dados_pessoas');
-            collection.find({ 'username': username, 'password': password}).toArray(function (err, docs) {
+            
+            collection.find({ 'username': username, 'password': password }).toArray(function (err, docs) {
                 if (err) reject(err)
-                if(docs.length != 0 ){
+                if (docs.length != 0) {
                     //let resultWeb = ({'status':200,'username': docs[0].username, 'email': docs[0].email})
                     resolve(docs[0]);
-                } else { resolve(({'status':401}))}
+                } else { resolve(({ 'status': 401 })) }
             });
+        }
+        MongoClient.close();
         })
     })
 }
@@ -22,38 +26,50 @@ function registerMember(credentialsPayload) {
     return new Promise((resolve, reject) => {
         MongoClient.connect(databaseServiceCredentials.mongodb, function (err, db) {
             if (err) reject(err)
+            if (db) {
+                const dbo = db.db(databaseServiceCredentials.dbName);
+                const collection = dbo.collection('dados_pessoas');
+                collection.insertMany([credentialsPayload], function (err, result) {
+                    resolve(result);
+                });
+            }
+            MongoClient.close();
+        })
+        
+    })
+}
+
+function updateImage(data) {
+    return new Promise((resolve, reject) => {
+        MongoClient.connect(databaseServiceCredentials.mongodb, function (err, db) {
+            if (err) reject(err)
+            if (db) {
             const dbo = db.db(databaseServiceCredentials.dbName);
             const collection = dbo.collection('dados_pessoas');
-            collection.insertMany([credentialsPayload], function (err, result) {
+            collection.updateOne({ email: data.email }, { $set: { image: data.image } }, function (err, result) {
                 resolve(result);
             });
+        }
+        
+        MongoClient.close();
         })
     })
 }
 
-function updateImage(data){
+function findUser(indicePessoa) {
     return new Promise((resolve, reject) => {
         MongoClient.connect(databaseServiceCredentials.mongodb, function (err, db) {
             if (err) reject(err)
+            if (db) {
             const dbo = db.db(databaseServiceCredentials.dbName);
             const collection = dbo.collection('dados_pessoas');
-            collection.updateOne({email:data.email},{$set:{image:data.image}}, function (err, result) {
+            collection.update({ $oid: "5ab936d16bf97849d0f8a28e" }, { $set: "tey" }, function (err, result) {
                 resolve(result);
             });
+        }
+        MongoClient.close();
         })
-    })
-}
-
-function findUser(indicePessoa){
-    return new Promise((resolve, reject) => {
-        MongoClient.connect(databaseServiceCredentials.mongodb, function (err, db) {
-            if (err) reject(err)
-            const dbo = db.db(databaseServiceCredentials.dbName);
-            const collection = dbo.collection('dados_pessoas');
-            collection.update({$oid:"5ab936d16bf97849d0f8a28e"}, {$set:"tey"}, function (err, result) {
-                resolve(result);
-            });
-        })
+        
     })
 }
 

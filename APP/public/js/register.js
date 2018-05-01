@@ -17,7 +17,7 @@ $(document).ready(function () {
             toast("Preencha corretamente")
         }
     })
-
+    
     function toast(msgError) {M.toast({ html: msgError })}
 
     function validateEmail(email) {
