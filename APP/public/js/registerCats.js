@@ -1,45 +1,35 @@
 $(document).ready(function () {
+    var auth = localStorage.getItem("catsmathObj")
+    var objPessoa = (JSON.parse(auth))    
     $("input, select, textarea").val('')
     $("#buttonConfirmarCat").click(function () {
-        var catfirst = $("#first_name").val()
-        var catlast = $("#last_name").val()
-        var desc = $("#desc_pet").val()
-        
-        if (catfirst.lenght>2) {
-            var objCat = {
-                "catfirst": catfirst,
-                "lastfirst": lastfirst,
-                "desc": desc,
-                "image": null
-            }
-            $("#catfirst").val("");$("#lastfirst").val("");$("#desc").val("")
-            resgisterCat(objCat)
-        } else {
-            console.log("----------->"+ catfirst)
-            console.log("----------->"+ catfirst.lenght)
-            console.log("----------->"+ catlast)
-            console.log("----------->"+ catlast.lenght)
-            toast("Preencha corretamente")
-        }
+
+
+        var objCat = new FormData($("#registercatform")[0])
+        objCat.append("email", objPessoa.email)
+        console.log(objCat)
+        resgisterCat(objCat)
     })
 
-    function toast(msgError) {M.toast({ html: msgError })}
+    function toast(msgError) { M.toast({ html: msgError }) }
 
-    
-    function resgisterCat(objCat){
+
+    function resgisterCat(objCat) {
         $.ajax({
             type: "POST",
             url: "/registerCat",
             data: objCat,
-            success: function(data){
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (data) {
                 console.log(data)
-                toast(data)
+                // toast("Imagem Atualizada")
             },
-            error: function(err){
-                console.log(err)
-                toast("Erro no servidor")
+            error: function (err) {
+                //  toast("Erro")
             }
         });
     }
-    
+
 })

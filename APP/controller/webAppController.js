@@ -12,7 +12,7 @@ function checkLoginCredentials(userCredentials){
 }
 function checkRegisterCat(registerCat){
     return new Promise((resolve,reject)=>{
-        dataBaseModel.registerCat(registerCat).then(response=>{
+        dataBaseModel.registerCats(registerCat).then(response=>{
             resolve(response)
         })
     })
