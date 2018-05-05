@@ -3,18 +3,23 @@
     <div class="col s12 m4 l2"></div>
     <div class="col s12 m4 l8">
     <div class="row">
-    <form class="col s12">
+    <form id="registercatform" class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-          <label for="first_name">Nome</label>
+          <input name="nome_gato" placeholder="Placeholder" id="nome_gato" type="text" class="validate">
+          <label for="nome_gato">Nome</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Idade</label>
+          <input name="idade" id="idade" type="text" class="validate">
+          <label for="idade">Idade</label>
         </div>
+        <div class="input-field col s6">
+          <input id="raca" name="raca" type="text" class="validate">
+          <label for="raca">Raça</label>
+        </div>
+
         <div class="input-field col s8">
-          <input placeholder="Placeholder" id="desc_pet" type="text" class="validate">
+          <input placeholder="Placeholder" id="desc_pet" name="desc_pet" type="text" class="validate">
           <label for="desc_pet">Descrição</label>
         </div>
 
@@ -22,7 +27,7 @@
       <div class="file-field input-field">
         <div class="btn">
           <span>File</span>
-          <input type="file">
+          <input type="file" name="fotogato">
         </div>
     
         <div class="file-path-wrapper">
