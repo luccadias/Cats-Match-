@@ -1,8 +1,6 @@
-
 var auth = localStorage.getItem("catsmathObj")
 if (authLogin(auth)) {
     $(document).ready(function () {
-
         var objPessoa = (JSON.parse(auth))
         console.log(objPessoa)
         loginAuth()
@@ -51,6 +49,7 @@ if (authLogin(auth)) {
                 });
         });
 
+        
         function updateImage(data) {
             $("#emailuser").val(objPessoa.email)
             //var formValue = $("#formData").serialize()
@@ -67,6 +66,7 @@ if (authLogin(auth)) {
                 processData: false,
                 success: function (data) {
                     console.log(data)
+
                     // toast("Imagem Atualizada")
                 },
                 error: function (err) {

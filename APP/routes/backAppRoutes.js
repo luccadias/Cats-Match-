@@ -75,4 +75,15 @@ router.post('/updateImage', function (req, res) {
         });
 });
 
+router.get('/getGatos', function (req, res) {
+    webAppController.getGatos()
+        .then((response) => {
+            res.status(200).send(response);
+        })
+        .catch((error) => {
+            console.log("<<<<<<<<<<Request error>>>>>>>>>>\n" + error)
+            res.status(200).send("AN INTERNAL SERVER ERROR OCURRED")
+        });
+});
+
 module.exports = router;

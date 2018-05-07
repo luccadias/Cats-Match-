@@ -34,9 +34,18 @@ function checkImage(dataImage){
     })
 }
 
+function getGatos(){
+    return new Promise((resolve, reject)=>{
+        dataBaseModel.findCats().then(response=>{
+            resolve(response)
+        })
+    })
+}
+
 module.exports = {
     checkLoginCredentials:checkLoginCredentials,
     checkRegisterMember:checkRegisterMember,
     checkImage:checkImage,
-    checkRegisterCat:checkRegisterCat
+    checkRegisterCat:checkRegisterCat,
+    getGatos: getGatos
 }

@@ -17,7 +17,6 @@ function authenticate(username, password) {
                 } else { resolve(({ 'status': 401 })) }
             });
         }
-        MongoClient.close();
         })
     })
 }
@@ -45,7 +44,6 @@ function registerMember(credentialsPayload) {
                     resolve(result);
                 });
             }
-            MongoClient.close();
         })
         
     })
@@ -62,8 +60,6 @@ function updateImage(data) {
                 resolve(result);
             });
         }
-        
-        MongoClient.close();
         })
     })
 }
@@ -79,9 +75,27 @@ function findUser(indicePessoa) {
                 resolve(result);
             });
         }
-        MongoClient.close();
         })
         
+    })
+}
+
+function findCats() {
+    return new Promise((resolve, reject) => {
+        MongoClient.connect(databaseServiceCredentials.mongodb, function (err, db) {
+            if (err) reject(err)
+            if (db) {
+            const dbo = db.db(databaseServiceCredentials.dbName);
+            const collection = dbo.collection('dados_gato');
+            collection.find({}).toArray(function (err, docs) {
+                if (err) reject(err)
+                console.log(docs)
+                if (docs.length != 0) {
+                    resolve(docs)
+                } else { resolve(docs) }
+            });
+        }
+        })
     })
 }
 
@@ -89,5 +103,6 @@ module.exports = {
     authenticate: authenticate,
     registerMember: registerMember,
     updateImage: updateImage,
-    registerCats:registerCats
+    registerCats:registerCats, 
+    findCats:findCats
 }
