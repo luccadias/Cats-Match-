@@ -3,8 +3,6 @@ $(document).ready(function () {
     var objPessoa = (JSON.parse(auth))    
     $("input, select, textarea").val('')
     $("#buttonConfirmarCat").click(function () {
-
-
         var objCat = new FormData($("#registercatform")[0])
         objCat.append("email", objPessoa.email)
         console.log(objCat)
@@ -24,10 +22,11 @@ $(document).ready(function () {
             processData: false,
             success: function (data) {
                 console.log(data)
-                // toast("Imagem Atualizada")
+                toast("Gato cadastrado")
+                $('#registercatform')[0].reset();
             },
             error: function (err) {
-                //  toast("Erro")
+                 toast("Erro")
             }
         });
     }
