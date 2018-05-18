@@ -8,4 +8,4 @@ Exemplo de organização em camadas, baseado em [Pitfalls using UML in RUP](http
 
 ## Implantação
 
-![](diagramaimplantacao.jpg)
+![](Componentes-camadas.jpg)
