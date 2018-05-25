@@ -1,6 +1,6 @@
 # Plano de testes
 
-##**Nome do caso de uso:** Manter cadastro
+## Nome do caso de uso: Manter cadastro
 
 **Preparação:**
 
@@ -16,7 +16,7 @@
 
 
 
-##**Nome do caso de uso:** Cadastrar animal de estimação
+## Nome do caso de uso: Cadastrar animal de estimação
 
 **Preparação:**
 
@@ -32,7 +32,7 @@
 
 
 
-##**Nome do caso de uso:** Buscar animais para adoção
+## Nome do caso de uso: Buscar animais para adoção
 
 **Preparação:**
 
@@ -48,7 +48,7 @@
 
 
 
-##**Nome do caso de uso:** Interagir com o dono do animal
+## Nome do caso de uso: Interagir com o dono do animal
 
 **Preparação:**
 
