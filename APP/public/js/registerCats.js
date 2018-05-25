@@ -11,7 +11,6 @@ $(document).ready(function () {
 
     function toast(msgError) { M.toast({ html: msgError }) }
 
-
     function resgisterCat(objCat) {
         $.ajax({
             type: "POST",

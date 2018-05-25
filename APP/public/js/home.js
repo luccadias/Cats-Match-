@@ -91,6 +91,10 @@ if (authLogin(auth)) {
                 }
             });
         }
+         
+        // $(".material-icons").click(function(){
+        //     console.log($(".material-icons"))
+        // })
     })
 } else {
     window.location.href = "/";
@@ -102,4 +106,57 @@ function authLogin(auth) {
     } else {
         return true
     }
+}
+function likeCat (id,email, nome){
+    console.log(id,email)
+    //alert("O gato entrou na sua lista de match")
+    var objPessoa = (JSON.parse(auth))
+    
+    if(email == objPessoa.email){
+        alert("vc não pode dar like no seu gato")
+    } else {
+        updateCat(id)
+        var objMatch = {
+            "dono": email ,
+            "match": objPessoa.email,
+            "idGato": id,
+            "nomeGato": nome,
+            "arrayMsg": undefined
+        }
+        registerMatch(objMatch)
+    }
+}
+function updateCat(id){
+    var objData ={
+        "id": id
+    }
+    console.log("entrou aqui")
+    $.ajax({
+        type: "POST",
+        url: "/updateCat",
+        data: objData,
+        success: function(data){
+            console.log(data)
+            
+        },
+        error: function(err){
+            //toast("Login Invalido")
+        }
+    });
+}
+
+function registerMatch(obj){
+    console.log("entrou aqui")
+    $.ajax({
+        type: "POST",
+        url: "/registerChat",
+        data: obj,
+        success: function(data){
+            console.log(data)
+            alert("vc deu match com o gato X")
+        },
+        error: function(err){
+            //toast("Login Invalido")
+        }
+    });
 }

@@ -20,12 +20,13 @@ router.post('/registerCat',function(req,res){
       console.log(base64)
     var objCat = {
             "image": base64,
-            "id": uuidv4,
+            "id": uuidv4(),
             "nome": req.body.nome_gato,
             "idade": req.body.idade,
             "raca": req.body.raca,
             "desc": req.body.desc_pet,
-            "email":req.body.email        
+            "email":req.body.email,
+            "status": true      
         }
         console.log(objCat);
     webAppController.checkRegisterCat(objCat)
@@ -57,6 +58,42 @@ router.post('/registerMember', function (req, res) {
         });
 });
 
+router.post('/registerChat', function (req, res) {
+    var objChat = req.body;
+    webAppController.checkRegisterMsg(objChat)
+        .then((response) => {
+            res.status(200).send("Mensagem cadastrada");
+        })
+        .catch((error) => {
+            console.log("<<<<<<<<<<Request error>>>>>>>>>>\n" + error)
+            res.status(200).send("AN INTERNAL SERVER ERROR OCURRED")
+        });
+});
+
+router.post('/updateCat', function (req, res) {
+    var objCat = req.body;
+    webAppController.checkUpdateCat(objCat)
+        .then((response) => {
+            res.status(200).send("Gato atualizado");
+        })
+        .catch((error) => {
+            console.log("<<<<<<<<<<Request error>>>>>>>>>>\n" + error)
+            res.status(200).send("AN INTERNAL SERVER ERROR OCURRED")
+        });
+});
+
+router.post('/updateMsg', function (req, res) {
+    var objMsg = req.body;
+    console.log(objMsg)
+    // webAppController.checkUpdateCat(objMsg)
+    //     .then((response) => {
+    //         res.status(200).send("Gato atualizado");
+    //     })
+    //     .catch((error) => {
+    //         console.log("<<<<<<<<<<Request error>>>>>>>>>>\n" + error)
+    //         res.status(200).send("AN INTERNAL SERVER ERROR OCURRED")
+    //     });
+});
 
 router.post('/updateImage', function (req, res) {
     console.log(req.files.sampleData.data)
@@ -68,6 +105,40 @@ router.post('/updateImage', function (req, res) {
     webAppController.checkImage(objData)
         .then((response) => {
             res.status(200).send("Perfil Update");
+        })
+        .catch((error) => {
+            console.log("<<<<<<<<<<Request error>>>>>>>>>>\n" + error)
+            res.status(200).send("AN INTERNAL SERVER ERROR OCURRED")
+        });
+});
+
+router.post('/updateMessage', function (req, res) {
+    console.log(req.body)
+    // webAppController.messageMatch(req.body)
+    //     .then((response) => {
+    //         res.status(200).send("Message Atualizada");
+    //     })
+    //     .catch((error) => {
+    //         console.log("<<<<<<<<<<Request error>>>>>>>>>>\n" + error)
+    //         res.status(200).send("AN INTERNAL SERVER ERROR OCURRED")
+    //     });
+});
+
+router.get('/getMatchs/:email', function (req, res) {
+    webAppController.getMatch(req.params.email)
+        .then((response) => {
+            res.status(200).send(response);
+        })
+        .catch((error) => {
+            console.log("<<<<<<<<<<Request error>>>>>>>>>>\n" + error)
+            res.status(200).send("AN INTERNAL SERVER ERROR OCURRED")
+        });
+});
+
+router.get('/getDono/:email', function (req, res) {
+    webAppController.getDono(req.params.email)
+        .then((response) => {
+            res.status(200).send(response);
         })
         .catch((error) => {
             console.log("<<<<<<<<<<Request error>>>>>>>>>>\n" + error)

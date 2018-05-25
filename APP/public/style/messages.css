@@ -1,0 +1,115 @@
+.messages{
+    width:100%;
+    height:100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.695);
+    top:0;
+    right:0;
+    margin:0 auto;
+    display: none;
+}
+.box{
+    margin:0 auto;
+    margin-top:15%;
+  width:60%;
+  height:50%;
+  background-color:white;
+}
+.header{
+    width:100%;
+    height:10%;
+    background-color:#FF7F15;
+}
+.header p{
+    color:white;
+    font-weight: bold;
+    font-size:2em;
+    float:right;
+    margin:0 0.5em 0em 0;
+    cursor: pointer;
+}
+.header h1{
+    margin:0;
+    color:white;
+    float:left;
+    font-size:1.5em;
+    margin: 0.4em 0 0 1em
+}
+.messages-box{
+    width:100%;
+    height: 90%;
+    background-color:rgb(255, 244, 214);
+}
+.input-usuario{
+    width:100%;
+    height:10%;
+    float:left;
+    background-color:rgb(255, 255, 255);
+}
+.input-usuario input[type="text"]{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border:1px solid #FF7F15;
+    width:80% !important;
+    float:left;
+}
+.input-usuario button{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width:20%;
+    float:right;
+    height:100%;
+    border:none;
+    border:3px solid #FF7F15;
+    background: white;
+    color:#FF7F15;
+    cursor: pointer;
+    
+}
+.bodyChat{
+    width:100%;
+    float:left;
+    height:90%;
+    min-height: 90% !important;
+    max-height: 90%;
+    overflow-y: scroll;
+}
+.match, .dono{
+    width:100%;
+    float:left;
+    height:auto;
+}
+.match p {
+    float:left;
+    background-color:rgb(255, 166, 0);
+    color:white;
+    padding:0.5em;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 0.5em 0 0 1em
+}
+.dono p {
+    float:right;
+    background-color:rgb(107, 107, 107);
+    color:#ffffff;
+    padding:0.5em;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 0.5em 1em 0 0em
+}
+.dono h1, .match h1{
+    margin:0;
+    font-size:0.5em;
+    color:black;
+    position: relative
+}
+.dono h1{
+    float: right
+}
+.match h1{
+    float:left
+}
