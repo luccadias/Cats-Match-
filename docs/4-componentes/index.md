@@ -18,7 +18,7 @@ Tela de Consulta: Voce pode olhar todos os gatos que estão disponiveis para ado
 ![](consulta.png)
 
 Tela de Cadastro de Gatos: Voce pode cadastrar gatos para serem adotados, só colocar o nome do gato, foto, idade e a descrição.
-![](cadastro_de_gatos.png)
+![](gatos.png)
 
 Tela de Match: Todos os gatos que voce deu like irão aparecer para voce conversar com o dono do gato.
-![](tela_de_matchs.png)
+![](matchs.png)
