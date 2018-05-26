@@ -21,4 +21,4 @@ Tela de Cadastro de Gatos: Voce pode cadastrar gatos para serem adotados, só co
 ![](gatos.png)
 
 Tela de Match: Todos os gatos que voce deu like irão aparecer para voce conversar com o dono do gato.
-![](matchs.png)
+![](match.png)
